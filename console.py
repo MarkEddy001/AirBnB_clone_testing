@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for the entry point of the command interpreter."""
+"""This module contains the class that is use for the console
+    i.e, the entry point for the command intepreter
+    """
+
 
 import cmd
 from models.base_model import BaseModel
@@ -24,20 +27,20 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def do_quit(self, line):
-        """Quit command to exit the program"""
+        """quit command to exit the program"""
         return True
 
     def do_EOF(self, line):
-        """Quit command to exit the program"""
+        """quit command to exit the program"""
         print()
         return True
 
     def emptyline(self):
-        """Do nothing when the line is empty"""
+        """do nothing when the line is empty"""
         pass
 
     def do_create(self, line):
-        """Create an instance of BaseModel"""
+        """create an instance of BaseModel"""
         if not line:
             print("** class name missing **")
         else:
@@ -49,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def do_show(self, line):
-        """Print the string implementation of an instance based
+        """print the string implementation of an instance based
         on the class name and the id
         """
         all_objects = {}
