@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the class that is use for the console
-    i.e, the entry point for the command intepreter
-    """
-
+"""Module for the entry point of the command interpreter."""
 
 import cmd
 from models.base_model import BaseModel

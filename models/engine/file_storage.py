@@ -8,33 +8,7 @@ import os
 
 class FileStorage:
 
-    """Handles the serializtion and deserialization of base classes.
-
-    class 'BaseModel' -> to_dict() <class 'dict'>
-    -> JSON dump <class 'str'> -> FILE <class 'str'>
-    -> JSON load <class 'dict'> -> <class 'BaseModel'
-
-    constructor -> __init__(self)
-    -----------------------------
-
-    Private class attributes
-    ------------------------
-    __file_path: string - path to the JSON file (ex: file.json)
-    __objects: dictionary - empty but will store all objects
-                by <class name>.id as a key
-
-    Public instance methods
-    -----------------------
-    all(self): returns the dictionary __objects
-    new(self, obj): sets in __objects the obj
-                    with key <obj class name>.id
-    save(self): serializes __objects to the JSON file
-                (path: __file_path)
-    reload(self): deserializes the JSON file to __objects
-                    (only if the JSON file (__file_path) exists ;
-                    otherwise, no exception should be raised)
-    """
-
+    """Handles the serializtion and deserialization of base classes."""
     __file_path = "file.json"
     __objects = {}
 
